@@ -24,12 +24,10 @@ const CarouselProduct = (props: CarouselProductProps) => {
         <CarouselContent>
           {images.map((image: { id: Key | null | undefined; url: any; }) => (
             <CarouselItem key={image.id}>
-              <Image
-                width={500}
-                height={375}
+              <img
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.url}`}
                 alt="Image product"
-                className="rounded-lg"
+                className="rounded-lg w-[500px] h-[375px] object-cover shadow-md"
               />
             </CarouselItem>
           ))}
