@@ -41,9 +41,8 @@ export default function ProductList() {
               <h2 className="text-lg font-semibold mb-2">
                 <Link href={`/product/${product.productSlug}`}>{product.productName}</Link>
               </h2>
-              {product.productCover && <Image
-                className="px-4 py-21 rounded bg-white"
-                width={90} height={90} priority
+              {product.productCover && <img
+                className="px-4 py-21 rounded bg-white w-26 h-28 object-cover m-1 border border-gray-300"
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.productCover.url}`} alt="" />}
             </div>
             {/* Mostrar imágenes aquí */}
