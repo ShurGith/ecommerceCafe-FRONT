@@ -50,11 +50,8 @@ export default function ProductList() {
             <div className="flex flex-wrap justify-between items-center">
               {product.productImages &&
                 product.productImages.map((image) => (
-                  <Image
-                    width={100}
-                    height={100}
-                    className="bg-gray-50 rounded-sm px-4 py-2"
-                    priority
+                  <img
+                    className="bg-gray-50 rounded-sm px-4 py-2 w-24 object-cover m-1 border border-gray-300"
                     key={image.id}
                     src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.url}`}
                     alt={image.alternativeText || ""}
